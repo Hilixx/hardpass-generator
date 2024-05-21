@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json());
 const allRoutes = require('./routes/allRoutes');
 const exphbs = require('express-handlebars');
+const port = 10000;
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 app.use(express.json());
@@ -11,6 +12,6 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use('/pass', allRoutes);
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('servidor rodando na porta 3000');
 });
