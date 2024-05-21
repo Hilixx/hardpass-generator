@@ -1,0 +1,20 @@
+
+ 
+    <h1>Escreva a senha que você deseja dificultar</h1>
+    <form action="/pass/post" method="POST">
+        <label for="inputValue">Senha:</label>
+        <input type="text" id="inputValue" name="password" required>
+        <br><br>
+        <label>Escolha o nivel de dificuldade:</label><br>
+        <input type="radio" id="number1" name="criptoLevel" value="1" required>
+        <label for="number1">1</label><br>
+        <input type="radio" id="number2" name="criptoLevel" value="2">
+        <label for="number2">2</label><br>
+        <input type="radio" id="number3" name="criptoLevel" value="3">
+        <label for="number3">3</label><br><br>
+        <input type="submit" value="enviar">
+    </form>
+    {{#if passReturn}}
+    <h1>Senha dificuldata: {{passReturn}}</h1>
+
+    {{/if}}
