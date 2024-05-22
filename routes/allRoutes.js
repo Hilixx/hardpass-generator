@@ -6,8 +6,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const controller = require('../controller/controller');
 const routes = express_1.default.Router();
-routes.get('/', (req, res) => {
-    res.render('index');
-});
 routes.post('/post', controller.passCrip);
 module.exports = routes;
